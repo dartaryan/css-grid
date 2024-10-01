@@ -1,0 +1,28 @@
+img {
+    max-width: 100%;
+}
+
+.pluto {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1vw;
+}
+
+img:first-child, img:last-child {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+img:last-child {
+animation: pluto-fade 0.4s infinite alternate;
+}
+
+@keyframes pluto-fade {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
